@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-image: url('https://media.istockphoto.com/id/1172408871/photo/lots-of-stars-shining-in-the-sky-of-a-tokyo-bay-area.jpg?b=1&s=170667a&w=0&k=20&c=qRxIWhd7ESKq3I65DyblSvRfm_G9geBNTPSk_qi5YKg=');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.frame {
+			position: relative;
+			width: 33.33%;
+			height: 400px;
+			margin: 0 10px;
+			border: 1px solid black;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			opacity: 1;
+		}
+
+		.enter-button {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color:solid deepskyblue;
+	border: none;
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 5px;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+
+.enter-button:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+.enter-button::before {
+    content: ""; /* add empty content before button */
+    display: inline-block; /* make it an inline block */
+    border: solid black; /* add a border */
+    border-width: 0 3px 3px 0; /* specify border shape to make it an arrow */
+    padding: 3px; /* add some padding */
+    transform: rotate(45deg); /* rotate arrow 45 degrees */
+    margin-right: 10px; /* add right margin to separate arrow from text */
+}
+
+
+		.frame1 {
+			background-image: url('https://cdn.dribbble.com/users/2613664/screenshots/7152776/media/523ab60c2cf8beeac10e31cc9150f87a.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			border-radius:10px;
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		.frame2 {
+			background-image: url('https://assets.materialup.com/uploads/0b8a7a16-0fc1-4630-a5e4-1aaf074ca6c7/preview.gif');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			border-radius:10px;
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		.frame3 {
+			background-image: url('https://static.vecteezy.com/system/resources/previews/004/665/887/original/2022-calendar-template-with-floral-abstract-design-free-vector.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			border-radius:10px;
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		.preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(255, 255, 255, 0.5);
+			display: none;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.loader {
+			border: 16px solid #f3f3f3;
+			border-top: 16px solid #3498db;
+			border-radius: 50%;
+			width: 120px;
+			height: 120px;
+			display: flex;
+			justify-content: center;
+			align items: center;
+			position: absolute;
+			background-color: whitesmoke;
+		}
+		.spinner{
+			width: 80px;
+			height: 80px;
+			border:10px solid skyblue;
+			border-radius: 50%;
+			border-top:10px solid black;
+			animation: spin 5s linear infinite;
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+	<div class="preloader" id="preloader">
+		<div class="loader"></div>
+		    <span class="spinner"></span>
+	</div>
+	<div class="container">
+		<div class="frame frame1">
+		    <a href="calculator-index.html"><button class="enter-button">Enter</button></a>
+		</div>
+		<div class="frame frame2">
+			<a href="clock-index.html"><button class="enter-button">Enter</button></a>
+		</div>
+		<div class="frame frame3">
+			<a href="calendar-index.html"><button class="enter-button">Enter</button></a>
+</div>
+</div>
+<script>
+	const enterButtons = document.querySelectorAll('.enter-button');
+	const preloader = document.getElementById('.preloader');
+	const loader = document.getElementById('.loader');
+
+	  window.addEventListener("click",function(){
+	     click.style.display = "flex"
+	  })
+      enterButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			preloader.style.display = 'flex';
+			setTimeout(function() => {
+				preloader.style.display = 'flex';
+				window.location.href = 'clock-index.html'; 
+			}, 9000);
+		});
+	});
+</script>
+</body>
+</html>

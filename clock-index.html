@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            background-image: url('https://media.istockphoto.com/id/1421762336/photo/yellow-alarm-clock-on-the-wooden-table.jpg?b=1&s=170667a&w=0&k=20&c=Aqq1GuLBmvFojfo3WU2A7sfUHRiMU6Zl9QHmPbgymz8=');
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .clock {
+            width: 250px;
+            height: 250px;
+            background-color:skyblue;
+            border-radius: 50%;
+            box-shadow: 50%;
+            position: relative;
+            border: 10px  black;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            fill-opacity: 20%;
+
+        }
+
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: whitesmoke;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .num {
+            position: absolute;
+            height: 100px;
+
+        }
+
+        .num span {
+            width: 16px;
+            height: 32px;
+            line-height: 32px;
+            color: black;
+            text-align: center;
+            vertical-align: middle;
+
+
+        }
+
+        .num1 {
+            transform: rotate(30deg);
+        }
+
+        .num2 {
+            transform: rotate(60deg);
+        }
+
+        .num3 {
+            transform: rotate(90deg);
+        }
+
+        .num {
+            position: absolute;
+            height: 100%;
+            left: calc(50% - 0.5em);
+
+        }
+
+        .num div {
+            width: 16px;
+            line-height: 32px;
+            color: rgb(133, 131, 131);
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .num1 {
+            transform: rotate(30deg);
+        }
+
+        .num1 span {
+            transform: rotate(-30deg);
+        }
+
+
+        .num2 {
+            transform: rotate(60deg);
+        }
+
+        .num2 span {
+            transform: rotate(-60deg);
+        }
+
+
+        .num3 {
+            transform: rotate(90deg);
+        }
+
+        .num3 span {
+            transform: rotate(-90deg);
+        }
+
+
+
+        .num4 {
+            transform: rotate(120deg);
+        }
+
+        .num4 span {
+            transform: rotate(-120deg);
+        }
+
+
+        .num5 {
+            transform: rotate(150deg);
+        }
+
+        .num5 span {
+            transform: rotate(-150deg);
+        }
+
+
+        .num6 {
+            transform: rotate(180deg);
+        }
+
+        .num6 span {
+            transform: rotate(-180deg);
+        }
+
+
+
+        .num7 {
+            transform: rotate(210deg);
+        }
+
+        .num7 span {
+            transform: rotate(-210deg);
+        }
+
+
+        .num8 {
+            transform: rotate(240deg);
+        }
+
+
+        .num8 span {
+            transform: rotate(-240deg);
+        }
+
+
+
+        .num9 {
+            transform: rotate(270deg);
+        }
+
+        .num9 span {
+            transform: rotate(-270deg);
+        }
+
+
+
+
+
+        .num10 {
+            transform: rotate(300deg);
+        }
+
+
+        .num10 span {
+            transform: rotate(-300deg);
+        }
+
+
+        .num11 {
+            transform: rotate(330deg);
+        }
+
+
+
+        .num11 span {
+            transform: rotate(-330deg);
+        }
+
+
+        .num12 {
+            transform: rotate(360deg);
+        }
+
+        .num12 span {
+            transform: rotate(-360deg);
+        }
+
+        .sec-hand {
+            width: 1px;
+            height: 50%;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            border-radius: 100% 100% 0 0;
+            background-color: #ff6767;
+            transform-origin: 50% 80%;
+
+        }
+
+        .min-hand {
+            width: 3px;
+            height: 40%;
+            position: absolute;
+            top: 17%;
+            left: 50%;
+            transform-origin: 50% 80%;
+            border-radius: 100% 100% 0 0;
+            background-color: #d6d6d6;
+            transform: rotate(60deg);
+
+        }
+
+        .hr-hand {
+            width: 5px;
+            height: 25%;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            border-radius: 100% 100% 0 0;
+            background-color: #d6d6d6;
+            transform-origin: 50% 80%;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="clock">
+        <div class="dot"></div>
+        <div class="num num1"><span>1</span></div>
+        <div class="num num2"><span>2</span></div>
+        <div class="num num3"><span>3</span></div>
+        <div class="num num4"><span>4</span></div>
+        <div class="num num5"><span>5</span></div>
+        <div class="num num6"><span>6</span></div>
+        <div class="num num7"><span>7</span></div>
+        <div class="num num8"><span>8</span></div>
+        <div class="num num9"><span>9</span></div>
+        <div class="num num10"><span>10</span></div>
+        <div class="num num11"><span>11</span></div>
+        <div class="num num12"><span>12</span></div>
+        <div class="hr-hand"></div>
+        <div class="min-hand"></div>
+        <div class="sec-hand"></div>
+        
+    <script>
+
+        let hrHand = document.querySelector('.hr-hand');
+        let minHand = document.querySelector('.min-hand');
+        let secHand = document.querySelector('.sec-hand');
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            let date = new Date();
+            secHand.style.transform = `rotate(${date.getSeconds() * 6}deg)`
+            minHand.style.transform = `rotate(${date.getMinutes() * 6}deg)`
+            hrHand.style.transform = `rotate(${date.getHours() * 30 + date.getMinutes() * 0.5}deg)`
+        }
+    </script>
+
+</body>
+
+</html>
